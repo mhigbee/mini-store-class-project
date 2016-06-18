@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app="storeApp">
+<head>
+    <meta charset="utf-8">
+    <title>Time App</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="styles.css" media="screen" title="no title" charset="utf-8">
+
+</head>
+<body ng-controller="mainController">
+
+<header>
+    <h3>Store</h3>
+</header>
+<h1 class="title">Products</h1>
+    <time-snippet></time-snippet>
+
+    <img ng-src="{{product.src}}" alt="{{product.name}}" class="card" ng-repeat="product in products" send-to="{{product.url}}"/>
+
+
+<script src="./js/app.js" charset="utf-8"></script>
+<script src="./js/mainController.js" charset="utf-8"></script>
+<script src="./js/timeDirective.js" charset="utf-8"></script>
+<script src="./js/helper.js" charset="utf-8"></script>
+</body>
+</html>
